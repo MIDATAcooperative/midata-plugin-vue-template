@@ -17,14 +17,15 @@ module.exports = {
   entry: [
     './src/app.js'
   ],  
+
+  output: {
+      publicPath: '/midata-plugin-vue-template/dist/'
+  },
+
   devServer: {
     hot: true,
     port : 9004,
-		https : true,
-    watchOptions: {
-      poll: true
-    },
-    publicPath:'/midata-plugin-vue-template/dist/'			
+		https : true
   },
   module: {
     rules: [

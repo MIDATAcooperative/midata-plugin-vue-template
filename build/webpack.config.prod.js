@@ -20,7 +20,8 @@ module.exports = {
 
   output: {
     filename: '[name].[contenthash].bundle.js',
-    path: resolve('dist')
+    path: resolve('dist'),
+    publicPath : '/plugin/midata-plugin-vue-template/dist/'
   },
 
   module: {

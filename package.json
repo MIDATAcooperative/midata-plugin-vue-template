@@ -5,16 +5,24 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config build/webpack.config.dev.js",
-    "dev": "webpack serve --config build/webpack.config.dev.js",
+    "dev:build": "webpack --config build/webpack.config.dev.js",
+    "prod:build": "webpack --config build/webpack.config.dev.js",
+    "serve": "webpack serve --config build/webpack.config.dev.js",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --ext .js,.vue src --fix"
   },
   "author": "Alexander Kreutz",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.21.1",
+    "basic-vue3-components": "~1.0.8",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.6.0",
     "vue": "^3.1.4",
-    "vue-loader": "^16.2.0"
+    "vue-composable": "^1.0.0-beta.23",
+    "vue-loader": "^16.2.0",
+    "vue-midata": "git+https://github.com/MIDATAcooperative/midata-plugin-vue-library.git",
+    "vue-router": "^4.0.10"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",

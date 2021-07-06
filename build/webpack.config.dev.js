@@ -51,7 +51,7 @@ module.exports = {
       inject: true
     }),
     new ESLintPlugin({
-      extensions : ['js']
+      extensions : ['js','vue']
     }),
     new MiniCssExtractPlugin({
      filename: '[name].css'

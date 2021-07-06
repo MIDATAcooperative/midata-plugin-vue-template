@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:build": "webpack --config build/webpack.config.dev.js",
-    "prod:build": "webpack --config build/webpack.config.dev.js",
+    "prod:build": "webpack --config build/webpack.config.prod.js",
     "serve": "webpack serve --config build/webpack.config.dev.js",
     "lint": "eslint --ext .js,.vue src",
     "lint:fix": "eslint --ext .js,.vue src --fix"

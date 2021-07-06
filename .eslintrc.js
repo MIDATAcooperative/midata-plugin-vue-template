@@ -8,5 +8,8 @@ module.exports = {
   ],
   plugins: [
     'vue'
-  ]
+  ],
+  rules : {
+    'vue/max-attributes-per-line' : 'off'
+  }
 }

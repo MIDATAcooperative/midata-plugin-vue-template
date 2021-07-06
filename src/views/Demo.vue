@@ -5,9 +5,11 @@
       class="btn btn-primary"
       @click="getPatientName()"
     >
-      Get
+      Get Patient Name
     </button>
-    {{ patient.name }}
+    <div v-if="patient && patient.name && patient.name.length" class="alert alert-info mt-3">
+      Patient Name: <b>{{ patient.name[0].given[0] }} {{ patient.name[0].family }}</b>
+    </div>
   </div>
 </template>
 <script>
@@ -31,3 +33,6 @@ export default {
   },
 };
 </script>
+<style>
+  h1 { color:red }
+</style>

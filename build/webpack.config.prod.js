@@ -12,20 +12,17 @@ function resolve (dir) {
 }
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
 
   entry: [
     './src/app.js'
   ],  
-  devServer: {
-    hot: true,
-    port : 9004,
-		https : true,
-    watchOptions: {
-      poll: true
-    },
-    publicPath:'/midata-plugin-vue-template/dist/'			
+
+  output: {
+    filename: '[name].[contenthash].bundle.js',
+    path: resolve('dist')
   },
+
   module: {
     rules: [
       {
@@ -45,19 +42,15 @@ module.exports = {
       } 
     ]
   },  
-  plugins: [
-    new webpack.HotModuleReplacementPlugin(),
+  plugins: [    
     new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
       inject: true
     }),
-    new ESLintPlugin({
-      extensions : ['js','vue']
-    }),
     new MiniCssExtractPlugin({
-     filename: '[name].css'
+     filename: '[name].[contenthash].css'
     }),
     new CopyWebpackPlugin({ patterns : [{
       from: resolve('src/assets/fonts'),

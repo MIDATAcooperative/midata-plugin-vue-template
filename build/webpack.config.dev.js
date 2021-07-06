@@ -6,6 +6,7 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
 const MiniCssExtractPlugin  = require('mini-css-extract-plugin')
 const path = require('path')
+const packageJson = require("../package.json");
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
@@ -19,7 +20,7 @@ module.exports = {
   ],  
 
   output: {
-      publicPath: '/midata-plugin-vue-template/dist/'
+      publicPath: '/'+packageJson.name+'/dist/'
   },
 
   devServer: {

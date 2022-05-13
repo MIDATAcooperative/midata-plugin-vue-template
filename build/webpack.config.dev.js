@@ -70,5 +70,12 @@ module.exports = {
       to: resolve('dist/img'),
       noErrorOnMissing: true  
     }]})
-  ] 
+  ],
+  resolve: {
+    modules: [
+      'node_modules',      
+      path.resolve(__dirname + '/../node_modules'),
+      path.resolve(__dirname + '/../src')            
+    ]
+  } 
 }

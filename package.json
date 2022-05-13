@@ -2,7 +2,7 @@
   "name": "midata-plugin-vue-template",
   "version": "1.0.0",
   "description": "Starter template for midata plugins using vue 3",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:build": "webpack --config build/webpack.config.dev.js",
@@ -14,7 +14,7 @@
   "author": "Alexander Kreutz",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.1",
+    "axios": "^0.21.4",
     "basic-vue3-components": "~1.0.8",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
@@ -41,6 +41,6 @@
     "url-loader": "^4.1.1",
     "webpack": "^5.42.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^4.0.0-beta.3"
+    "webpack-dev-server": "^4.9.0"
   }
 }

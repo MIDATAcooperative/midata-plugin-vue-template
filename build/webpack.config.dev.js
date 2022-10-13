@@ -20,13 +20,13 @@ module.exports = {
   ],  
 
   output: {
-      publicPath: '/'+packageJson.name+'/dist/'
+      publicPath: '/'+packageJson.name+'/'
   },
 
   devServer: {
     hot: true,
     port : 9004,
-		https : true
+		server: 'https'
   },
   module: {
     rules: [

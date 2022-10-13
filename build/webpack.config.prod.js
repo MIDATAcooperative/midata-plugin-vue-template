@@ -22,7 +22,7 @@ module.exports = {
   output: {
     filename: '[name].[contenthash].bundle.js',
     path: resolve('dist'),
-    publicPath : '/plugin/'+packageJson.name+'/dist/'
+    publicPath : '/plugin/'+packageJson.name+'/'
   },
 
   module: {

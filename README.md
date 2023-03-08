@@ -9,7 +9,7 @@ Getting started
 2. In "package.json" change the name of the application in line 2 from "midata-plugin-vue-template" into something unique.
 3. Run "npm install" in that directory
 4. Run "npm run serve"
-5. Open the plugin in your browser at URL https://localhost:9004/changeme/dist/index.html  (change "changeme" into your plugin name)
+5. Open the plugin in your browser at URL https://localhost:9004/changeme/index.html  (change "changeme" into your plugin name)
    Your browser should complain about the SSL certificate. Add a security exception. This is important for later.
    If it worked you should see "Hello World" in your browser.
    
@@ -18,7 +18,7 @@ Getting started
    "Internal Name" must be what you have chosen as plugin name during point 3)
    "Type" should be: Visualization
    "Name", "Description", "Tile Name" : Fill out as you wish
-   "URL" should be: dist/index.html#?authToken=:authToken 
+   "URL" should be: index.html#?authToken=:authToken 
    "Default Dashboard" : "me"
    "Data Access Filter" : Add body weight for this example
 8. Choose your plugin in the portal and click on "Install from localhost"

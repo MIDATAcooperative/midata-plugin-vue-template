@@ -26,7 +26,7 @@ module.exports = {
   devServer: {
     hot: true,
     port : 9004,
-		server: 'https'
+	server : "https"
   },
   module: {
     rules: [

@@ -14,13 +14,15 @@
   "author": "Alexander Kreutz",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.21.4",
-    "basic-vue3-components": "~1.0.8",
+    "axios": "^1.6.7",
+    "basic-vue3-components": "^1.0.13",
     "bootstrap": "^4.6.0",
     "jquery": "^3.6.0",
+    "sass": "^1.35.1",
+    "sass-loader": "^12.1.0",
     "vue": "^3.1.4",
     "vue-composable": "^1.0.0-beta.23",
-    "vue-loader": "^16.2.0",
+    "vue-loader": "^16.8.3",
     "vue-midata": "git+https://github.com/MIDATAcooperative/midata-plugin-vue-library.git",
     "vue-router": "^4.0.10"
   },
@@ -39,8 +41,8 @@
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.1.0",
     "url-loader": "^4.1.1",
-    "webpack": "^5.42.1",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.9.0"
+    "webpack": "^5.76.3",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^4.7.4"
   }
 }

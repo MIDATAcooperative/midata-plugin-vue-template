@@ -20,7 +20,8 @@ module.exports = {
   ],  
 
   output: {
-      publicPath: '/'+packageJson.name+'/'
+      publicPath: '/'+packageJson.name+'/'	,
+	  clean: true
   },
 
   devServer: {
@@ -30,9 +31,30 @@ module.exports = {
   },
   module: {
     rules: [
+	  {
+		  mimetype: 'image/svg+xml',			 
+		  type: 'asset/resource',
+		  generator: {
+		     filename: 'icons/[hash].svg'
+		  }
+	  },
       {
         test: /\.vue$/,
         use: 'vue-loader'
+      },
+      {
+        test: /\.(sa|sc)ss$/,
+        use: [
+            MiniCssExtractPlugin.loader,
+            "css-loader"/*,
+            {
+                loader: 'postcss-loader',
+                options: {
+                  plugins: () => [autoprefixer()]
+                }
+            }*/,
+            'sass-loader'      
+        ]
       },
       {
         test: /\.css$/,
@@ -44,7 +66,21 @@ module.exports = {
       {
         test: /\.js$/,
         use: 'babel-loader'
-      } 
+      },
+	  {
+	  	test: /\.(ico|png|jpg|jpeg|gif|svg|webp|tiff)$/i,
+	  	type: "asset/resource",
+	  	generator: {
+	  	   filename: "images/[name].[hash][ext]",
+	  	},
+	  },
+	  {
+	    test: /\.(woff|woff2|eot|ttf|otf)$/i,
+	    type: "asset/resource",
+	    generator: {
+	       filename: "fonts/[name].[hash][ext]",
+	    },
+	  }
     ]
   },  
   plugins: [

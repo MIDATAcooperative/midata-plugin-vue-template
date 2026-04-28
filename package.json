@@ -32,7 +32,7 @@
     "@vue/compiler-sfc": "^3.1.4",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.2",
-    "copy-webpack-plugin": "^12.0.2",
+    "copy-webpack-plugin": "^14.0.0",
     "css-loader": "^7.1.2",
     "eslint": "^7.30.0",
     "eslint-plugin-vue": "^7.12.1",
@@ -42,7 +42,7 @@
     "mini-css-extract-plugin": "^2.9.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.76.3",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
   }
 }

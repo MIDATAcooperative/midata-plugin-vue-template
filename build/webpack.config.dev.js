@@ -21,13 +21,13 @@ module.exports = {
 
   output: {
       publicPath: '/'+packageJson.name+'/'	,
-	  clean: true
+      clean: true
   },
 
   devServer: {
     hot: true,
     port : 9004,
-	server : "https"
+    server : "https"
   },
   module: {
     rules: [

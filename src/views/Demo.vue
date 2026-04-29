@@ -1,10 +1,7 @@
 <template>
   <div>
     <h1>{{ $t("title") }}</h1>
-    <button
-      class="btn btn-primary"
-      @click="getPatientName()"
-    >
+    <button class="btn btn-primary" @click="getPatientName()">
       Get Patient Name
     </button>
     <div v-if="patient && patient.name && patient.name.length" class="alert alert-info mt-3">
@@ -17,22 +14,26 @@ import midataServer from "vue-midata/midata.js";
 import midataPortal from "vue-midata/midataPortal.js";
 
 export default {
+  name: "MyDemo",
+
   data: () => ({
-    patient : {}
+    patient: {}
   }),
 
   created: function () {
-   
+
   },
-  
+
   methods: {
     getPatientName() {
-        midataServer.fhirSearch("Patient", { _id : midataPortal.owner }, true)
-        .then((result) => this.$data.patient = result[0] );
+      midataServer.fhirSearch("Patient", { _id: midataPortal.owner }, true)
+        .then((result) => this.$data.patient = result[0]);
     }
   },
 };
 </script>
 <style>
-  h1 { color:red }
+h1 {
+  color: red
+}
 </style>
